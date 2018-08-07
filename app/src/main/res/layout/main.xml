@@ -1,11 +1,46 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+	<com.gregorjosh.engine.GameView
+		android:id="@+id/game"
+		android:layout_width="match_parent"
+		android:layout_height="500dp"/>
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+	<Button
+		android:id="@+id/btn_left"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="50px"
+		android:layout_below="@id/game"
+		android:text="left"/>
 
-</LinearLayout>
+	<Button
+		android:id="@+id/btn_jump"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="50px"
+		android:layout_below="@id/game"
+		android:layout_toRightOf="@id/btn_left"
+		android:text="jump"/>
+	
+	<Button
+		android:id="@+id/btn_right"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="50px"
+		android:layout_below="@id/game"
+		android:layout_toRightOf="@id/btn_jump"
+		android:text="right"/>
+	
+	<Button
+		android:id="@+id/btn_gravity"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="50px"
+		android:layout_below="@id/game"
+		android:layout_toRightOf="@id/btn_right"
+		android:text="gravity"/>
+		
+</RelativeLayout>
